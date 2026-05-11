@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Home, Thoughtfully Designed From Start to Finish | Natalie Boyd Design House</title>
+<meta name="description" content="Brisbane's trusted architectural and interior design studio. From concept to construction, we manage everything so you don't have to. Family-owned. DIA Accredited.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --taupe: #80776E;
+    --gold: #A38D55;
+    --white: #FFFFFF;
+    --offwhite: #FAF9F7;
+    --light-taupe: #F0EEEB;
+    --dark: #3A3632;
+    --gold-light: rgba(163,141,85,0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Josefin Sans', 'Futura', 'Century Gothic', 'Trebuchet MS', sans-serif;
+    font-weight: 300;
+    color: var(--taupe);
+    background: var(--white);
+    line-height: 1.75;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+
+  /* ── HEADER ── */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--light-taupe);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-header img {
+    height: 36px;
+    width: auto;
+  }
+  .header-cta {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--gold);
+    border: none;
+    padding: 10px 22px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .header-cta:hover { background: var(--taupe); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 140px 24px 80px;
+    text-align: center;
+    background: var(--white);
+    position: relative;
+  }
+  .hero-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: clamp(28px, 5vw, 44px);
+    line-height: 1.25;
+    color: var(--dark);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  .hero h1 span {
+    color: var(--gold);
+  }
+  .hero p.sub {
+    font-size: clamp(15px, 2.5vw, 18px);
+    color: var(--taupe);
+    margin-bottom: 36px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+  }
+  .hero-cta-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .btn-primary {
+    display: inline-block;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--gold);
+    padding: 16px 42px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover { background: var(--taupe); }
+  .hero-email {
+    font-size: 14px;
+    color: var(--taupe);
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+  .hero-email:hover { color: var(--gold); }
+
+  .hero-image {
+    margin-top: 60px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--offwhite);
+    padding: 28px 24px;
+    text-align: center;
+    border-top: 1px solid var(--light-taupe);
+    border-bottom: 1px solid var(--light-taupe);
+  }
+  .trust-bar-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--taupe);
+    white-space: nowrap;
+  }
+  .trust-item strong {
+    font-weight: 400;
+    color: var(--gold);
+  }
+
+  /* ── SECTION DEFAULTS ── */
+  section {
+    padding: 80px 24px;
+  }
+  .section-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .section-heading {
+    font-weight: 300;
+    font-size: clamp(24px, 4vw, 34px);
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+  }
+  .section-sub {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px;
+    color: var(--taupe);
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* ── PROCESS / TRANSFORMATION ── */
+  .process {
+    background: var(--offwhite);
+  }
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .process-step {
+    text-align: center;
+  }
+  .step-number {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 16px;
+    color: var(--gold);
+    font-weight: 400;
+  }
+  .process-step h3 {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .process-step p {
+    font-size: 14px;
+    color: var(--taupe);
+    line-height: 1.7;
+  }
+  .process-arrow {
+    display: none;
+  }
+
+  /* ── BENEFITS ── */
+  .benefit-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  .benefit-row:last-child { margin-bottom: 0; }
+  .benefit-row.reverse { direction: rtl; }
+  .benefit-row.reverse > * { direction: ltr; }
+  .benefit-img img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+  }
+  .benefit-text h3 {
+    font-weight: 300;
+    font-size: clamp(20px, 3vw, 26px);
+    color: var(--dark);
+    margin-bottom: 14px;
+    line-height: 1.35;
+  }
+  .benefit-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--taupe);
+  }
+
+  /* ── FEATURES ── */
+  .features {
+    background: var(--offwhite);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 36px;
+  }
+  .feature-card {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--white);
+    border: 1px solid var(--light-taupe);
+  }
+  .feature-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .feature-card h3 {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 10px;
+  }
+  .feature-card p {
+    font-size: 14px;
+    color: var(--taupe);
+    line-height: 1.7;
+  }
+
+  /* ── MID CTA ── */
+  .mid-cta {
+    background: var(--dark);
+    text-align: center;
+    padding: 60px 24px;
+  }
+  .mid-cta h2 {
+    font-weight: 300;
+    font-size: clamp(22px, 3.5vw, 30px);
+    color: var(--white);
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+  }
+  .mid-cta p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 28px;
+    font-size: 15px;
+  }
+  .mid-cta .btn-primary {
+    border: 1px solid var(--gold);
+  }
+
+  /* ── WHAT'S INCLUDED ── */
+  .included-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+  }
+  .included-item {
+    padding: 28px;
+    background: var(--offwhite);
+    border-left: 3px solid var(--gold);
+  }
+  .included-item h3 {
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .included-item p {
+    font-size: 14px;
+    color: var(--taupe);
+    line-height: 1.7;
+  }
+
+  /* ── TESTIMONIALS ── */
+  .testimonials {
+    background: var(--offwhite);
+  }
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 36px;
+  }
+  .testimonial-card {
+    background: var(--white);
+    padding: 36px 32px;
+    border: 1px solid var(--light-taupe);
+    position: relative;
+  }
+  .testimonial-card .quote-mark {
+    font-size: 48px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 12px;
+    font-family: Georgia, serif;
+  }
+  .testimonial-card blockquote {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--taupe);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+  .testimonial-card .attribution {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* ── GALLERY STRIP ── */
+  .gallery-strip {
+    padding: 0;
+    overflow: hidden;
+  }
+  .gallery-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+  }
+  .gallery-row img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  /* ── COMPARISON ── */
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .comparison-table th {
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--light-taupe);
+    color: var(--dark);
+  }
+  .comparison-table th:first-child { color: var(--taupe); }
+  .comparison-table th.highlight { color: var(--gold); }
+  .comparison-table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--light-taupe);
+    font-size: 14px;
+    color: var(--taupe);
+  }
+  .comparison-table td:first-child {
+    font-weight: 400;
+    color: var(--dark);
+  }
+  .check { color: var(--gold); font-size: 18px; }
+  .dash { color: #ccc; }
+
+  /* ── FAQ ── */
+  .faq-list {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--light-taupe);
+    padding: 24px 0;
+  }
+  .faq-item summary {
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--dark);
+    letter-spacing: 0.5px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 22px;
+    color: var(--gold);
+    transition: transform 0.3s;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .faq-item[open] summary::after {
+    transform: rotate(45deg);
+  }
+  .faq-item p {
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--taupe);
+    line-height: 1.8;
+  }
+
+  /* ── FINAL CTA ── */
+  .final-cta {
+    background: var(--dark);
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .final-cta h2 {
+    font-weight: 300;
+    font-size: clamp(24px, 4vw, 36px);
+    color: var(--white);
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    line-height: 1.35;
+  }
+  .final-cta p {
+    color: rgba(255,255,255,0.7);
+    font-size: 15px;
+    max-width: 540px;
+    margin: 0 auto 32px;
+    line-height: 1.8;
+  }
+  .final-cta .btn-primary {
+    border: 1px solid var(--gold);
+    margin-bottom: 18px;
+  }
+  .final-cta .email-link {
+    display: block;
+    color: rgba(255,255,255,0.5);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+  }
+  .final-cta .email-link:hover { color: var(--gold); }
+  .trust-badges {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .trust-badge {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* ── FOOTER ── */
+  .site-footer {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--white);
+    border-top: 1px solid var(--light-taupe);
+  }
+  .site-footer p {
+    font-size: 12px;
+    color: var(--taupe);
+    letter-spacing: 1px;
+    line-height: 1.8;
+  }
+  .site-footer a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .hero { padding: 120px 20px 50px; }
+    .hero-image img { height: 260px; }
+    .process-steps { grid-template-columns: 1fr; gap: 28px; }
+    .benefit-row,
+    .benefit-row.reverse {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 24px;
+    }
+    .benefit-img img { height: 240px; }
+    .gallery-row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-row img { height: 180px; }
+    .comparison-table { font-size: 13px; }
+    .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    section { padding: 60px 20px; }
+    .trust-bar-inner { gap: 20px; }
+    .trust-item { font-size: 10px; }
+  }
+
+  @media (max-width: 480px) {
+    .site-header { padding: 12px 16px; }
+    .site-header img { height: 28px; }
+    .header-cta { font-size: 10px; padding: 8px 16px; letter-spacing: 2px; }
+    .gallery-row img { height: 140px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .included-grid { grid-template-columns: 1fr; }
+    .testimonial-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════ HEADER ════ -->
+<header class="site-header">
+  <img src="logo.avif" alt="Natalie Boyd Design House">
+  <a href="#enquire" class="header-cta">Begin Your Enquiry</a>
+</header>
+
+<!-- ════ 1. HERO — ABOVE THE FOLD ════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Your Home, <span>Thoughtfully Designed</span> From Start to Finish</h1>
+    <p class="sub">We're a family-owned Brisbane studio that manages everything — from town planning to construction drawings to the last robe hook and paint selection — so you don't have to.</p>
+    <div class="hero-cta-row">
+      <a href="#enquire" class="btn-primary">Begin Your Project Enquiry</a>
+      <a href="mailto:enquire@natalieboyd.design" class="hero-email">enquire@natalieboyd.design</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://static.wixstatic.com/media/dc58ca_0ddc600b83564431a04c44a6dfcda745~mv2.jpg/v1/fill/w_1400,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/dc58ca_0ddc600b83564431a04c44a6dfcda745~mv2.jpg" alt="Natalie Boyd Design House — luxury residential interior">
+  </div>
+</section>
+
+<!-- ════ TRUST BAR ════ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <span class="trust-item"><strong>DIA</strong> Accredited Member</span>
+    <span class="trust-item">Family-Owned Studio</span>
+    <span class="trust-item">Brisbane &amp; Sunshine Coast</span>
+    <span class="trust-item">Concept to Construction</span>
+  </div>
+</div>
+
+<!-- ════ 2. THE TRANSFORMATION — PROCESS ════ -->
+<section class="process">
+  <div class="section-inner">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-heading">Three Simple Steps to Your Finished Home</h2>
+    <p class="section-sub">Whether you're building from scratch or renovating, we guide you through a clear, structured process — so it actually feels enjoyable.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Share Your Vision</h3>
+        <p>Complete our enquiry form and we'll arrange an introductory call to understand your brief, lifestyle and goals.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>We Design &amp; Document</h3>
+        <p>From concept sketches to construction drawings, material selections, custom joinery and procurement — we handle the detail.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Move Into Your Home</h3>
+        <p>We manage installation and styling through to the final walk-through, so you step into a home that's completely resolved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 3. BENEFITS (DEEP, VISUAL) ════ -->
+<section class="benefits">
+  <div class="section-inner">
+    <p class="section-label">Why It Matters</p>
+    <h2 class="section-heading">A Home That Feels Effortless — Because the Process Was</h2>
+
+    <div class="benefit-row">
+      <div class="benefit-img">
+        <img src="https://static.wixstatic.com/media/dc58ca_a512945005b24548a917526c77d513f9~mv2.png/v1/fill/w_800,h_600,al_c,q_90,enc_avif,quality_auto/dc58ca_a512945005b24548a917526c77d513f9~mv2.png" alt="Hamilton Home living room by Natalie Boyd Design">
+      </div>
+      <div class="benefit-text">
+        <h3>One Team, One Vision, One Point of Contact</h3>
+        <p>You won't be coordinating architects, interior designers, and stylists separately. We lead architecture, interiors, procurement and styling as a single creative direction — from the first sketch to the day you move in.</p>
+      </div>
+    </div>
+
+    <div class="benefit-row reverse">
+      <div class="benefit-img">
+        <img src="https://static.wixstatic.com/media/dc58ca_f071a39417ff4caab51bd4f955265c46~mv2.png/v1/fill/w_800,h_600,al_c,q_90,enc_avif,quality_auto/dc58ca_f071a39417ff4caab51bd4f955265c46~mv2.png" alt="Hamilton Home kitchen by Natalie Boyd Design">
+      </div>
+      <div class="benefit-text">
+        <h3>Designed Around How You Actually Live</h3>
+        <p>Every space we create is grounded in your lifestyle — the rhythms of your family, how you gather, how you rest. The result is a home that doesn't just look considered, it feels right the moment you walk in.</p>
+      </div>
+    </div>
+
+    <div class="benefit-row">
+      <div class="benefit-img">
+        <img src="https://static.wixstatic.com/media/dc58ca_5c6705ca334d4478b7b8be4c1bee9e3f~mv2.png/v1/fill/w_800,h_600,al_c,q_90,enc_avif,quality_auto/dc58ca_5c6705ca334d4478b7b8be4c1bee9e3f~mv2.png" alt="Walk-in robe by Natalie Boyd Design">
+      </div>
+      <div class="benefit-text">
+        <h3>Every Detail Is Considered — Down to the Last Robe Hook</h3>
+        <p>We don't leave finishes to chance. Paint selections, lighting, hardware, custom furniture — each choice is deliberate and cohesive. You'll never be left guessing what comes next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 4. FEATURES (SCANNABLE) ════ -->
+<section class="features">
+  <div class="section-inner">
+    <p class="section-label">Our Services</p>
+    <h2 class="section-heading">Architecture, Interiors &amp; Everything In Between</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#9634;</div>
+        <h3>Architecture</h3>
+        <p>Town planning, concept design, construction documentation — prepared with licensed consultants and engineers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9672;</div>
+        <h3>Interior Design</h3>
+        <p>Spatial planning, joinery design, material and finish selections — all coordinated as one cohesive vision.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9830;</div>
+        <h3>Custom Furniture</h3>
+        <p>Bespoke pieces designed and sourced through our in-house furniture line, led by co-founder Gal.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#10022;</div>
+        <h3>Procurement &amp; Styling</h3>
+        <p>We manage logistics, delivery and installation — your home is furnished, styled and ready from day one.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9711;</div>
+        <h3>New Builds &amp; Renovations</h3>
+        <p>From knock-down rebuilds to heritage renovations, we guide projects of every scale and complexity.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9674;</div>
+        <h3>Sustainable Design</h3>
+        <p>Ecological, societal and economic considerations woven into every decision — because good design should last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 5. MID-PAGE CTA ════ -->
+<section class="mid-cta">
+  <h2>Ready to Start the Conversation?</h2>
+  <p>Every project begins with a simple enquiry. Tell us about your vision.</p>
+  <a href="#enquire" class="btn-primary">Begin Your Project Enquiry</a>
+</section>
+
+<!-- ════ 6. WHAT'S INCLUDED ════ -->
+<section class="whats-included">
+  <div class="section-inner">
+    <p class="section-label">What You Get</p>
+    <h2 class="section-heading">What's Included When You Work With Us</h2>
+    <p class="section-sub">No matter which service tier you choose, here's what every client can expect.</p>
+    <div class="included-grid">
+      <div class="included-item">
+        <h3>Natalie Leads Personally</h3>
+        <p>Your project is led by Natalie herself — not handed off to a junior designer. You work directly with the creative director.</p>
+      </div>
+      <div class="included-item">
+        <h3>Introductory Design Call</h3>
+        <p>A genuine conversation about your goals, lifestyle and vision — before any commitment.</p>
+      </div>
+      <div class="included-item">
+        <h3>Full Project Management</h3>
+        <p>We coordinate trades, consultants, engineers and builders. You get one clear point of contact throughout.</p>
+      </div>
+      <div class="included-item">
+        <h3>Tailored to Your Budget</h3>
+        <p>Three service tiers — Signature, Curated and Atelier — so we can match the scope to where your project is at.</p>
+      </div>
+      <div class="included-item">
+        <h3>Clear Communication</h3>
+        <p>Structured yet intuitive. You'll always know what's happening, what's coming next, and what's needed from you.</p>
+      </div>
+      <div class="included-item">
+        <h3>Licensed &amp; Compliant</h3>
+        <p>All documentation prepared in collaboration with licensed consultants, structural engineers, and certified builders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 7. SOCIAL PROOF ════ -->
+<section class="testimonials">
+  <div class="section-inner">
+    <p class="section-label">Client Words</p>
+    <h2 class="section-heading">What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <blockquote>The entire process was seamless, and the end result exceeded my expectations. Natalie truly captured my vision and brought it to life with her unique flair and expertise.</blockquote>
+        <p class="attribution">Client J.R. — West End Home</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <blockquote>We're so happy with the amazing work Natalie and her team provided for us. Could not recommend Natalie Boyd Designs high enough! Absolutely superb service and designs.</blockquote>
+        <p class="attribution">Client A.R. — Sandgate Home</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="quote-mark">"</div>
+        <blockquote>Natalie Boyd Designs has been with us from the very beginning, guiding every stage of the process with clarity and great attention to detail. What would have been overwhelming actually felt so supported under Natalie's direction.</blockquote>
+        <p class="attribution">Natalie Boyd Design House Client</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 8. GALLERY STRIP ════ -->
+<section class="gallery-strip">
+  <div class="gallery-row">
+    <img src="https://static.wixstatic.com/media/dc58ca_1b295482121f4a85a07ed2696669c5f6~mv2.png/v1/fill/w_700,h_500,al_c,q_90,enc_avif,quality_auto/dc58ca_1b295482121f4a85a07ed2696669c5f6~mv2.png" alt="Luxury bathroom design">
+    <img src="https://static.wixstatic.com/media/dc58ca_f071a39417ff4caab51bd4f955265c46~mv2.png/v1/fill/w_700,h_500,al_c,q_90,enc_avif,quality_auto/dc58ca_f071a39417ff4caab51bd4f955265c46~mv2.png" alt="Hamilton Home kitchen">
+    <img src="https://static.wixstatic.com/media/dc58ca_a512945005b24548a917526c77d513f9~mv2.png/v1/fill/w_700,h_500,al_c,q_90,enc_avif,quality_auto/dc58ca_a512945005b24548a917526c77d513f9~mv2.png" alt="Hamilton Home living room">
+    <img src="https://static.wixstatic.com/media/dc58ca_5c6705ca334d4478b7b8be4c1bee9e3f~mv2.png/v1/fill/w_700,h_500,al_c,q_90,enc_avif,quality_auto/dc58ca_5c6705ca334d4478b7b8be4c1bee9e3f~mv2.png" alt="Walk-in robe design">
+  </div>
+</section>
+
+<!-- ════ 9. COMPARISON TABLE ════ -->
+<section class="comparison">
+  <div class="section-inner">
+    <p class="section-label">Our Service Tiers</p>
+    <h2 class="section-heading">Find the Right Fit for Your Project</h2>
+    <div style="overflow-x:auto;">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th class="highlight">Signature</th>
+            <th>Curated</th>
+            <th>Atelier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Architecture &amp; Town Planning</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="dash">—</span></td>
+            <td><span class="dash">—</span></td>
+          </tr>
+          <tr>
+            <td>Construction Documentation</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="dash">—</span></td>
+          </tr>
+          <tr>
+            <td>Interior Architecture</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="dash">—</span></td>
+          </tr>
+          <tr>
+            <td>Interior Design &amp; Joinery</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="dash">—</span></td>
+          </tr>
+          <tr>
+            <td>Material &amp; Finish Selections</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Furniture &amp; Lighting Curation</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Procurement &amp; Installation</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+          <tr>
+            <td>Full Styling</td>
+            <td><span class="check">&#10003;</span></td>
+            <td><span class="dash">—</span></td>
+            <td><span class="check">&#10003;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 10. FAQ ════ -->
+<section class="faq" style="background: var(--offwhite);">
+  <div class="section-inner">
+    <p class="section-label">Common Questions</p>
+    <h2 class="section-heading">Things You Might Be Wondering</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Where are you based, and do you work outside Brisbane?</summary>
+        <p>We're based in Brisbane, but we take on projects across South East Queensland, the Sunshine Coast, Gold Coast, and beyond — including interstate and international work. Current projects span from Byron Bay to California.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much does a project typically cost?</summary>
+        <p>Every project is different. Investment ranges and timelines are discussed during your Introductory Design Call, and confirmed after we've walked through your brief together in a Vision Session. We'll help you identify the right service tier for your scope.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to have plans or an architect already?</summary>
+        <p>Not at all. Our Signature service covers everything from architecture and town planning through to styling. If you already have an architect or builder, our Curated and Atelier tiers pick up where they leave off.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does a project take?</summary>
+        <p>It depends on scale and complexity. Thoughtfully designed homes naturally unfold over time — some projects move through construction across many months, and larger projects over several years. We'll give you a clear timeline early on.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Will I be working directly with Natalie?</summary>
+        <p>Yes. Natalie personally leads every project. She's supported by a small, hand-picked team of designers, architects, and collaborators — but she remains your primary creative director and point of contact.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What types of projects do you take on?</summary>
+        <p>New builds, knock-down rebuilds, renovations, refurbishments, interior design, and furnishing and styling. We work across residential projects of all scales — from apartment interiors to full architectural builds.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════ 11. GALLERY STRIP 2 ════ -->
+<section class="gallery-strip">
+  <div class="gallery-row">
+    <img src="https://static.wixstatic.com/media/dc58ca_baafc97a660c400c953ad3dab6ae29c8~mv2.png/v1/fill/w_700,h_500,al_c,q_90,enc_avif,quality_auto/dc58ca_baafc97a660c400c953ad3dab6ae29c8~mv2.png" alt="Ashgrove Home by Natalie Boyd Design">
+    <img src="https://static.wixstatic.com/media/dc58ca_becaea75c7ff478b9823b20a723a4b83~mv2.jpg/v1/fill/w_700,h_500,al_c,q_85,enc_avif,quality_auto/dc58ca_becaea75c7ff478b9823b20a723a4b83~mv2.jpg" alt="Interior design detail">
+    <img src="https://static.wixstatic.com/media/dc58ca_2d600820a28f468cb3e062157d99ff3c~mv2.jpg/v1/fill/w_700,h_500,al_c,q_85,enc_avif,quality_auto/dc58ca_2d600820a28f468cb3e062157d99ff3c~mv2.jpg" alt="Luxury interior space">
+    <img src="https://static.wixstatic.com/media/dc58ca_20a4e2c350464d4a8566c3d79abf8308~mv2.jpg/v1/fill/w_700,h_500,al_c,q_85,enc_avif,quality_auto/dc58ca_20a4e2c350464d4a8566c3d79abf8308~mv2.jpg" alt="Residential design detail">
+  </div>
+</section>
+
+<!-- ════ 12. FINAL CTA ════ -->
+<section class="final-cta" id="enquire">
+  <h2>Let's Design the Home You've Been Imagining</h2>
+  <p>Every project begins with a conversation. Tell us about your vision — whether it's a sketch on the back of an envelope or a fully formed brief — and we'll take it from there.</p>
+  <a href="https://www.natalieboyd.design/projectenquiry" class="btn-primary" target="_blank" rel="noopener">Begin Your Project Enquiry</a>
+  <a href="mailto:enquire@natalieboyd.design" class="email-link">or email enquire@natalieboyd.design</a>
+  <div class="trust-badges">
+    <span class="trust-badge">DIA Accredited Member #4540367</span>
+    <span class="trust-badge">ABN 92 548 768 828</span>
+    <span class="trust-badge">Family-Owned &amp; Operated</span>
+  </div>
+</section>
+
+<!-- ════ FOOTER ════ -->
+<footer class="site-footer">
+  <p>&copy; 2025 Natalie Boyd Design House &nbsp;|&nbsp; <a href="https://www.natalieboyd.design" target="_blank" rel="noopener">natalieboyd.design</a></p>
+</footer>
+
+</body>
+</html>
